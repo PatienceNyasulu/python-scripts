@@ -25,7 +25,7 @@ vehicle_identification_number = ""
 # Initialize MQTT client
 iot_client = AWSIoTMQTTClient("raspberry")
 iot_client.configureEndpoint("a3s1cqgu0ggloe-ats.iot.eu-central-1.amazonaws.com", 8883)
-iot_client.configureCredentials("AmazonRootCA1.pem", "ab41d0a6fc44dea8cbdaf000498a154a78feddc4e0a17270d035dbddb642b8b8-private.pem.key", "ab41d0a6fc44dea8cbdaf000498a154a78feddc4e0a17270d035dbddb642b8b8-certificate.pem")
+iot_client.configureCredentials("AmazonRootCA1.pem", "ab41d0a6fc44dea8cbdaf000498a154a78feddc4e0a17270d035dbddb642b8b8-private.pem.key", "ab41d0a6fc44dea8cbdaf000498a154a78feddc4e0a17270d035dbddb642b8b8-certificate.pem.crt")
 
 # Configure MQTT connection
 iot_client.configureOfflinePublishQueueing(-1)  # Infinite offline publish queueing
