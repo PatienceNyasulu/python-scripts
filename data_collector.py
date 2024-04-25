@@ -37,7 +37,7 @@ commands = {
     "throttle_position": obd.commands.THROTTLE_POS,
     "timing_advance": obd.commands.TIMING_ADVANCE,
     "vehicle_identification_number": obd.commands.VIN,
-    "equivalent_ratio": obd.commands.EQUIV_RATIO
+    #"equivalent_ratio": obd.commands.EQUIV_RATIO
 }
 
 # Main loop to read and publish OBD2 data
