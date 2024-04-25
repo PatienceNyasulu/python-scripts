@@ -21,7 +21,7 @@ connection = obd.OBD()
 
 # OBD2 commands for specific parameters
 commands = {
-    "engine_power": obd.commands.ENGINE_POWER,
+    #"engine_power": obd.commands.ENGINE_POWER,
     "coolant_temperature": obd.commands.COOLANT_TEMP,
     "fuel_level": obd.commands.FUEL_LEVEL,
     "engine_load": obd.commands.ENGINE_LOAD,
