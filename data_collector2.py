@@ -1,3 +1,4 @@
+from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
 import obd
 import time
 
