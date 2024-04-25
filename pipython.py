@@ -21,7 +21,7 @@ client.connect("a3s1cqgu0ggloe-ats.iot.eu-central-1.amazonaws.com", 8883, 60) #T
 
 def intrusionDetector(Dummy):
     while (1):    
-	x=GPIO.input(21)
+    x=GPIO.input(21)
         if (x==0): 
             print "Just Awesome" 
             client.publish("Device/data", payload="To the World NCT!!" , qos=0, retain=False)
