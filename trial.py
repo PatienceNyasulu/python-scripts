@@ -17,8 +17,12 @@ myMQTTClient.configureConnectDisconnectTimeout (10) # 10 sec
 myMQTTClient.configureMQTTOperationTimeout (5) # 5 sec
 print ('Initiating IoT Core Topic ... ') 
 myMQTTClient.connect ( )
-myMQTTClient.subscribe("home/helloworld", 1, helloworld)
+#myMQTTClient.subscribe("home/helloworld", 1, helloworld)
 
-while True:
-    time.sleep(5)
-                
+#while True:
+ #   time.sleep(5)
+print("Publishing message from RPI")
+myMQTTClint.publish(
+    topic="home/helloworld",
+    Qos=1
+    payload="{'Message' : 'Message by RPI'}")
