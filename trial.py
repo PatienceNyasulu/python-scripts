@@ -6,7 +6,6 @@ def helloworld(self, params, packet):
  print ('Topic: '+ packet.topic)
  print ("Payload: ", (packet.payload))
 
-
 myMQTTClient = AWSIoTMQTTClient ("raspberry") #random key, if anotier connection using the same key is
 myMQTTClient.configureEndpoint("a3s1cqgu0ggloe-ats.iot.eu-central-1.amazonaws.com", 8883)
 
@@ -19,5 +18,7 @@ myMQTTClient.configureMQTTOperationTimeout (5) # 5 sec
 print ('Initiating IoT Core Topic ... ') 
 myMQTTClient.connect ( )
 myMQTTClient.subscribe("home/helloworld", 1, helloworld)
-                        
+
+while True:
+    time.sleep(5)
                 
