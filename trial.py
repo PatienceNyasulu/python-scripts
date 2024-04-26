@@ -12,7 +12,7 @@ myMQTTClient.configureEndpoint("a3s1cqgu0ggloe-ats.iot.eu-central-1.amazonaws.co
 
 myMQTTClient. configureCredentials("AmazonRootCA1.pem", "ab41d0a6fc44dea8cbdaf000498a154a78feddc4e0a17270d035dbddb642b8b8-private.pem.key", "ab41d0a6fc44dea8cbdaf000498a154a78feddc4e0a17270d035dbddb642b8b8-certificate.pem.crt")
 
-myMQTTClient.configureofflinePublishQueueing(-1) # Infinite offline Publish queueing 
+myMQTTClient.configureOfflinePublishQueueing(-1) # Infinite offline Publish queueing 
 myMQTTClient.configureDrainingFrequency(2) # Draining: 2 HZ 
 myMQTTClient.configureConnectDisconnectTimeout (10) # 10 sec
 myMQTTClient.configureMQTTOperationTimeout (5) # 5 sec
