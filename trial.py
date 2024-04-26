@@ -22,7 +22,7 @@ myMQTTClient.connect ( )
 #while True:
  #   time.sleep(5)
 print("Publishing message from RPI")
-myMQTTClint.publish(
+myMQTTClient.publish(
     topic="home/helloworld",
     Qos=1,
     payload="{'Message' : 'Message by RPI'}")
