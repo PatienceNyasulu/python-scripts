@@ -21,7 +21,6 @@ connection = obd.OBD()
 
 # OBD2 commands for specific parameters
 commands = {
-    #"engine_power": obd.commands.ENGINE_POWER,
     "coolant_temperature": obd.commands.COOLANT_TEMP,
     "fuel_level": obd.commands.FUEL_LEVEL,
     "engine_load": obd.commands.ENGINE_LOAD,
@@ -29,16 +28,12 @@ commands = {
     "rpm": obd.commands.RPM,
     "intake_manifold_pressure": obd.commands.INTAKE_PRESSURE,
     "maf": obd.commands.MAF,
-    "long_term_fuel_trim": obd.commands.LONG_FUEL_TRIM_1,
-    "short_term_fuel_trim": obd.commands.SHORT_FUEL_TRIM_1,
     "fuel_pressure": obd.commands.FUEL_PRESSURE,
     "speed": obd.commands.SPEED,
     "dtc_number": obd.commands.GET_DTC,
     "throttle_position": obd.commands.THROTTLE_POS,
-    "timing_advance": obd.commands.TIMING_ADVANCE,
     "vehicle_identification_number": obd.commands.VIN,
-    #"equivalent_ratio": obd.commands.EQUIV_RATIO
-}
+    }
 
 # Main loop to read and publish OBD2 data
 while True:
