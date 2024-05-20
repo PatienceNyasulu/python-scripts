@@ -44,7 +44,7 @@ while True:
                 continue
             data = f"{param_name}: {response.value}"
             print(data)  # Optionally print the data
-            iot_client.publish("obd2_data", data, 1)
+            iot_client.publish("car/obd", data, 1)
         except Exception as e:
             print(f"Error reading {param_name}: {e}")
-    time.sleep(10)  # Adjust as needed for data frequency
+    time.sleep(30)  # Adjust as needed for data frequency
