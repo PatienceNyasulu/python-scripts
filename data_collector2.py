@@ -5,7 +5,6 @@ import time
 # OBD Globals
 obdRunning = True
 obdAvailable = False
-engine_power = 0
 coolant_temperature = 0
 fuel_level = 0
 engine_load = 0
@@ -40,7 +39,6 @@ def obd_thread():
     print("OBD connected")
     while obdRunning:
         try:
-            engine_power = obdConnection.query(obd.commands.ENGINE_POWER).value.magnitude
             coolant_temperature = obdConnection.query(obd.commands.COOLANT_TEMP).value.magnitude
             fuel_level = obdConnection.query(obd.commands.FUEL_LEVEL).value.magnitude
             engine_load = obdConnection.query(obd.commands.ENGINE_LOAD).value.magnitude
@@ -57,7 +55,7 @@ def obd_thread():
         except Exception as e:
             print("An error occurred:", e)
             obdAvailable = False
-        time.sleep(0.5)
+        time.sleep(30)
 
 # Execute the OBD thread
 obd_thread()
