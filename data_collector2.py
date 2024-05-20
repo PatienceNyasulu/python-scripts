@@ -13,13 +13,10 @@ ambient_air_temperature = 0
 rpm = 0
 intake_manifold_pressure = 0
 maf = 0
-long_term_fuel_trim = 0
-short_term_fuel_trim = 0
 fuel_pressure = 0
 speed = 0
 dtc_number = 0
 throttle_position = 0
-timing_advance = 0
 vehicle_identification_number = ""
 
 # Initialize MQTT client
@@ -51,13 +48,10 @@ def obd_thread():
             rpm = obdConnection.query(obd.commands.RPM).value.magnitude
             intake_manifold_pressure = obdConnection.query(obd.commands.INTAKE_PRESSURE).value.magnitude
             maf = obdConnection.query(obd.commands.MAF).value.magnitude
-            long_term_fuel_trim = obdConnection.query(obd.commands.LONG_FUEL_TRIM).value.magnitude
-            short_term_fuel_trim = obdConnection.query(obd.commands.SHORT_FUEL_TRIM).value.magnitude
             fuel_pressure = obdConnection.query(obd.commands.FUEL_PRESSURE).value.magnitude
             speed = obdConnection.query(obd.commands.SPEED).value.magnitude
             dtc_number = obdConnection.query(obd.commands.DTC_NUMBER).value.magnitude
             throttle_position = obdConnection.query(obd.commands.THROTTLE_POS).value.magnitude
-            timing_advance = obdConnection.query(obd.commands.TIMING_ADVANCE).value.magnitude
             vehicle_identification_number = obdConnection.query(obd.commands.VIN).value
             obdAvailable = True
         except Exception as e:
